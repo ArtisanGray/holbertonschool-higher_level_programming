@@ -4,7 +4,7 @@ if __name__ == "__main__":
     num = 0
     print("{:d} argument".format(len(sys.argv) - 1), end="")
     if len(sys.argv) == 1:
-        print(".")
+        print("s.")
     elif len(sys.argv) == 2:
         print(":")
     else:
