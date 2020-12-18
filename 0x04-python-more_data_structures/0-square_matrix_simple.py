@@ -1,11 +1,8 @@
-#!/usr/bin/python
-def sq(x):
-	return(x * x)
-
+#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     if matrix is None:
         return
     nm = []
     for i in range(len(matrix)):
-        nm.append(list(map(sq, matrix[i])))
+        nm.append(list(map(lambda x: x * x, matrix[i])))
     return(nm)
