@@ -4,7 +4,5 @@ def square_matrix_simple(matrix=[]):
         return
     nm = []
     for i in range(len(matrix)):
-        nm.append(matrix[i].copy())
-        for j in range(len(nm[i])):
-            nm[i][j] = nm[i][j] ** 2
+        nm.append(list(map(lambda x: x * x, matrix[i])))
     return(nm)
