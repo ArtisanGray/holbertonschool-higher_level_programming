@@ -1,8 +1,15 @@
 #!/usr/bin/python3
-class Square():
-    '''creates a class that is a square'''
+"""this module contains a square class"""
+
+
+class Square:
+    """square class with different methods"""
     def __init__(self, size=0):
-        '''initializes the data used for the square'''
+        """initializes the size of the square and any other data needed
+
+        Args:
+            size(int): size of the square
+        """
         if isinstance(size, int) is not True:
             raise TypeError('size must be an integer')
         if size < 0:
