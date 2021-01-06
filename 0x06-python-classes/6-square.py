@@ -44,7 +44,7 @@ class Square:
             value(tuple): position of the square
         """
         if type(value) != tuple:
-            raise TypeError("Position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         if len(value) != 2:
             raise TypeError(te)
         for pos in value:
