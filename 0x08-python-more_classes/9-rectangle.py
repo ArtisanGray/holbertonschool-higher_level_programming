@@ -26,7 +26,8 @@ class Rectangle:
         for i in range(0, self.__height):
             for j in range(0, self.__width):
                 rect += str(self.print_symbol)
-            rect += "\n"
+            if i < self.__height - 1:
+                rect += "\n"
         return (rect)
 
     def __repr__(self):
