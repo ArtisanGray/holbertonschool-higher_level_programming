@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """this module opens a file and reads it."""
+import json
 
 
 def from_json_string(my_str):
