@@ -6,8 +6,8 @@ if __name__ == "__main__":
     import sys
     db = MySQLdb.connect("localhost", sys.argv[1], sys.argv[2], sys.argv[3])
     db_curs = db.cursor()
-    db_curs.execute("SELECT * FROM states WHERE name=(%s) ORDER BY id;",
-                    [sys.argv[4]])
+    db_curs.execute("SELECT * FROM states WHERE BINARY name='{}'\
+ORDER BY states.id;".format(argv[4]))
     db_data = db_curs.fetchall()
 
     for item in db_data:
