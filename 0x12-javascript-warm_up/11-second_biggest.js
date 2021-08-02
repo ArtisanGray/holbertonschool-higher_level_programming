@@ -1,7 +1,9 @@
 #!/usr/bin/node
-if (process.argv.length <= 2) {
-  console.log(0);
+if (process.argv.length > 3) {
+  let newarg = process.argv.slice(2);
+  newarg.sort(function (a, b) { return b - a; });
+  console.log(newarg);
+  console.log(newarg[1]);
 } else {
-  const newarr = process.argv.sort(function (a, b) { return b - a; });
-  console.log(newarr[3]);
+  console.log(0);
 }
