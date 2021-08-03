@@ -5,7 +5,6 @@ const flip = data.list.map(x => multi(data.list, x));
 
 function multi (list, item) {
   length++;
-  console.log(item + "'s current index is: " + length);
   return item * length;
 }
 console.log(data.list);
