@@ -9,10 +9,8 @@ if __name__ == "__main__":
     ms = link.cursor()
     ms.execute("SELECT * FROM states ORDER BY id ASC")
     data = ms.fetchall()
-    nuh = ['n', 'N']
     for item in data:
-        for ns in nuh:
-            if ns in item[1][0]:
-                print(item)
+        if item[1][0] == 'N' or item[1][0] == 'n':
+            print(item)
     ms.close()
     link.close()
