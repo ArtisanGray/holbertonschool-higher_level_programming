@@ -11,7 +11,7 @@ if __name__ == "__main__":
     data = ms.fetchall()
     for item in data:
         worb = item[1]
-        if worb[0] == 'N' or worb[0] == 'n':
+        if worb[0] == 'N':
             print(item)
     ms.close()
     link.close()
