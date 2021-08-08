@@ -22,5 +22,7 @@ if __name__ == "__main__":
                     i += 1
                 else:
                     print()
+            else:
+                print()
         ms.close()
         link.close()
