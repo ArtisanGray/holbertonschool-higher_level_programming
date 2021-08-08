@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+"""this module is for manipulating MySQL databases."""
 import MySQLdb
-"""this module uses the mysql import to manipulate sql databases."""
 
 if __name__ == "__main__":
     link = MySQLdb.connect(host="localhost", port=3306, user="root",
