@@ -15,11 +15,12 @@ if __name__ == "__main__":
         data = ms.fetchall()
         i = 0
         for item in data:
-            print(str(item[0]), end='')
-            if (i < len(data) - 1):
-                print(', ', end='')
-                i += 1
-            else:
-                print()
+            if (len(item) > 0):
+                print(str(item[0]), end='')
+                if (i < len(data) - 1):
+                    print(', ', end='')
+                    i += 1
+                else:
+                    print()
         ms.close()
         link.close()
