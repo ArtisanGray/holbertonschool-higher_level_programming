@@ -10,7 +10,8 @@ if __name__ == "__main__":
     ms.execute("SELECT * FROM states ORDER BY id ASC")
     data = ms.fetchall()
     for item in data:
-        if item[1][0] == 'N' or item[1][0] == 'n':
+        worb = item[1]
+        if worb[0] == 'N' or worb[0] == 'n':
             print(item)
     ms.close()
     link.close()
