@@ -14,10 +14,8 @@ if __name__ == "__main__":
 
     session = Session(engine)
     state_name = str(sys.argv[4])
-    first_state = session.query(State).order_by(State.id).filter(
+    first_state = session.query(State).filter(
                           State.name.contains(state_name)).first()
-    states = session.query(State).order_by(State.id).filter(
-                             State.name.contains(state_name))
     if first_state:
             print("{}".format(first_state.id))
     else:
