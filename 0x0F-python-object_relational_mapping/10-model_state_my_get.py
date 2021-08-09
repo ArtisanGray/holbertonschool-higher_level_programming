@@ -19,8 +19,7 @@ if __name__ == "__main__":
     states = session.query(State).order_by(State.id).filter(
                              State.name.contains(state_name))
     if first_state:
-        for item in states:
-            print("{}".format(item.id))
+            print("{}".format(first_state.id))
     else:
         print("Not found")
     session.close()
