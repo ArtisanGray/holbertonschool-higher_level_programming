@@ -14,10 +14,13 @@ if __name__ == "__main__":
 
     session = Session(engine)
     state_name = str(sys.argv[4])
-    state = session.query(State).order_by(State.id).filter(
+    first_state = session.query(State).order_by(State.id).filter(
                           State.name.contains(state_name)).first()
-    if state:
-        print("{}".format(state.id))
+    states = session.query(State).order_by(State.id).filter(
+                             State.name.contains(state_name))
+    if first_state:
+        for item in states:
+            print("{}".format(item.id))
     else:
         print("Not found")
     session.close()
