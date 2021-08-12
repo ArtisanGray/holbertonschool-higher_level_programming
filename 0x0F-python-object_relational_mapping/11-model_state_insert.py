@@ -15,4 +15,6 @@ if __name__ == "__main__":
     session = Session(engine)
     session.add(State(name='Louisiana'))
     session.commit()
+    new_id = session.query(State).order_by(State.id.desc()).first()
+    print(new_id.id)
     session.close()
