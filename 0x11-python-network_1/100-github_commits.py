@@ -12,6 +12,9 @@ if __name__ == "__main__":
                      .format(own, repo))
 
     values = r.json()
+    i = 0
     for item in values:
-        print(item.get('sha') + ":", item.get('commit').get('author').
-              get('name'))
+        if i < 10:
+            print(item.get('sha') + ":", item.get('commit').get('author').
+                  get('name'))
+        i += 1
