@@ -8,15 +8,14 @@ if __name__ == "__main__":
 
     url = "http://0.0.0.0:5000/search_user"
     letter = ""
-    if (sys.argv[1]):
-        letter = sys.argv[1]
-        data = {'q': letter}
-    else:
-        data = {'q': ''}
+    if (len(sys.argv) > 1):
+        if (len(sys.argv[1]) > 0 and sys.argv[1].isalpha() is True):
+            letter = sys.argv[1]
+    data = {'q': letter}
     r = requests.post(url, data)
     try:
         values = r.json()
-        if values == {} or values is None:
+        if len(values) > 0:
             print("[{}] {}".format(values['id'], values['name']))
         else:
             print("No result")
