@@ -13,5 +13,5 @@ if __name__ == "__main__":
 
     values = r.json()
     for item in values:
-        print(item.get('sha'), item.get('commit').get('author').
+        print(item.get('sha') + ":", item.get('commit').get('author').
               get('name'))
