@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """this module grabs the Github ID of a user's authenicated request."""
 import requests
 import sys
