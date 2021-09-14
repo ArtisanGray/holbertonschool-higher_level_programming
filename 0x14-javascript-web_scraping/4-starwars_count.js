@@ -2,8 +2,8 @@
 
 const request = require('request');
 const url = process.argv[2];
-let count = -1;
-
+let count = 0;
+let tstr = '';
 request(url, function (error, response, body) {
   if (error) {
     console.error(error);
@@ -11,8 +11,9 @@ request(url, function (error, response, body) {
   const data = JSON.parse(body);
   for (const item in data.results) {
     for (const car in data.results[item].characters) {
-      if (car === '18') {
-        count++;
+      tstr = data.results[item].characters[car];
+      if (tstr.includes('18')) {
+        count += 1;
       }
     }
   }
