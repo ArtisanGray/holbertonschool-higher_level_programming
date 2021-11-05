@@ -13,8 +13,8 @@ request(url, function (error, response, body) {
       if (error) {
         console.error(error);
       }
-      const charData = JSON.parse(body);
-      console.log(charData.name);
+      const cData = JSON.parse(body);
+      console.log(cData.name);
     });
   }
 });
